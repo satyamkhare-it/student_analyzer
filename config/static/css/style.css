@@ -1,0 +1,126 @@
+/* GLOBAL */
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background-color: #0f172a;
+}
+
+.sidebar h4 {
+    color: #fff;
+}
+
+.sidebar a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 12px 18px;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 6px;
+}
+
+.sidebar a:hover {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+/* CARDS */
+.dashboard-card {
+    border-radius: 16px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    padding: 20px;
+}
+
+/* CHART IMAGES */
+.chart-img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+/* THEME BUTTON */
+.theme-btn {
+    border-radius: 50%;
+}
+
+/* GRAPH CARD FIX */
+.graph-card {
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+}
+
+.graph-card img {
+    flex-grow: 1;
+    object-fit: contain;
+    max-height: 320px;
+}
+
+/* TOP RANK CARDS */
+.rank-card {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* GLASS HEADER */
+.header-glass {
+    padding: 16px 24px;
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Dark mode support */
+[data-bs-theme="dark"] .header-glass {
+    background: rgba(33, 37, 41, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Common sidebar item style */
+.sidebar a,
+.sidebar-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 10px 12px;
+
+    color: #cfd8ff;
+    text-decoration: none;
+    font-weight: 500;
+
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.sidebar a:hover,
+.sidebar-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+/* Button reset (important) */
+.sidebar-btn {
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+/* Remove form spacing */
+.sidebar-form {
+    margin: 0;
+}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- KPI CARDS -->
+<div class="row g-4 mb-4">
+    {% for student in top_students %}
+    <div class="col-md-4">
+        <div class="dashboard-card rank-card">
+            <small class="text-muted">
+                Rank {{ student.rank }}
+            </small>
+            <h5 class="fw-bold mb-1">
+                {{ student.Name }}
+            </h5>
+            <span class="text-success fw-semibold">
+                Predicted Score: {{ student.Predicted_Score|floatformat:2 }}
+            </span>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+<!-- CHARTS -->
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="dashboard-card graph-card">
+            <h6 class="mb-2">Average Marks</h6>
+            <img src="{{ bar_chart }}" class="chart-img">
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="dashboard-card graph-card">
+            <h6 class="mb-2">Subject Distribution</h6>
+            <img src="{{ pie_chart }}" class="chart-img">
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="dashboard-card graph-card">
+            <h6 class="mb-2">Exam Trend</h6>
+            <img src="{{ line_chart }}" class="chart-img">
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="dashboard-card graph-card">
+            <h6 class="mb-2">Attendance vs Marks</h6>
+            <img src="{{ scatter_chart }}" class="chart-img">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

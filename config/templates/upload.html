@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="dashboard-card col-md-6">
+    <h4 class="fw-bold mb-3">Upload Student CSV</h4>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file" class="form-control mb-3" required>
+        <button type="submit" class="btn btn-success">
+            Analyze Data
+        </button>
+    </form>
+</div>
+
+{% endblock %}
