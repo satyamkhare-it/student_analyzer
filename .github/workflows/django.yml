@@ -8,12 +8,12 @@ on:
 
 jobs:
   build:
-    working-directory: backend
+
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
       matrix:
-        python-version: "3.11"
+        python-version: [3.11]
 
     steps:
     - uses: actions/checkout@v4
